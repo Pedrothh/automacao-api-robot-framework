@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.11.5 on win32)" generated="2025-02-11T23:56:40.935871" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginScenarios" source="D:\robot_framework_api_cicd\LoginScenarios.robot">
+<test id="s1-t1" name="Cenário 01: Fazer login com sucesso" line="5">
+<kw name="Dado que a URL está disponível está disponível" owner="LoginBDD">
+<kw name="Carrega URL" owner="LoginSteps">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-11T23:56:41.822670" level="INFO">Creating Session using : alias=my_session, url=https://my-public-api-for-tests-production.up.railway.app, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>my_session</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</kw>
+<kw name="Quando envio a requisição POST para o endpoint &quot;/api/login&quot; com body jsonSchema/login/Post/request.json" owner="LoginBDD" source_name="Quando envio a requisição ${METODO} para o endpoint &quot;${ENDPOINT}&quot; com body ${JSON_FILE}">
+<kw name="Envia requisição" owner="LoginSteps">
+<if>
+<branch type="IF" condition="'${METODO}' == 'GET'">
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>my_session</arg>
+<arg>${ENDPOINT}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${METODO}' == 'POST'">
+<if>
+<branch type="IF" condition="'${ENDPOINT}' == '/api/login'">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-02-11T23:56:41.822670" level="INFO">${body} = {'username': 'admin', 'password': '12345'}</msg>
+<var>${body}</var>
+<arg>${JSON_FILE}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">POST Request : url=https://my-public-api-for-tests-production.up.railway.app/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '42', 'Content-Type': 'application/json'} 
+ body=b'{"username": "admin", "password": "12345"}' 
+ </msg>
+<msg time="2025-02-11T23:56:42.846454" level="INFO">POST Response : url=https://my-public-api-for-tests-production.up.railway.app/api/login 
+ status=200, reason=OK 
+ headers={'Content-Length': '187', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Wed, 12 Feb 2025 02:56:42 GMT', 'Etag': 'W/"bb-Zihy3iDObZ5K0PvNBYIOoVFaIck"', 'Server': 'railway-edge', 'X-Powered-By': 'Express', 'X-Railway-Request-Id': 'N3-pM_h9Sue1bsJjLVKovA_3165824431'} 
+ body={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImlhdCI6MTczOTMyOTAwMiwiZXhwIjoxNzM5MzMyNjAyfQ.lhU82muKQgZrK3Kteii9vqWvP07zoFKwgxu8d-5NDSs"} 
+ </msg>
+<msg time="2025-02-11T23:56:42.846454" level="INFO">C:\Users\Pichau\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'my-public-api-for-tests-production.up.railway.app'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-11T23:56:42.846454" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>my_session</arg>
+<arg>${ENDPOINT}</arg>
+<arg>json=${body}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</branch>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</if>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</branch>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</if>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">Resposta: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImlhdCI6MTczOTMyOTAwMiwiZXhwIjoxNzM5MzMyNjAyfQ.lhU82muKQgZrK3Kteii9vqWvP07zoFKwgxu8d-5NDSs"}</msg>
+<arg>Resposta: ${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<arg>${METODO}</arg>
+<arg>${ENDPOINT}</arg>
+<arg>${JSON_FILE}</arg>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</kw>
+<kw name="Então o código de resposta deve ser 200" owner="LoginBDD" source_name="Então o código de resposta deve ser ${STATUS_CODE_ESPERADO}">
+<kw name="Confere o status code" owner="LoginSteps">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>${STATUS_CODE_ESPERADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">Status Code Retornado: 200 -- Status Code Esperado: 200</msg>
+<arg>Status Code Retornado: ${response.status_code} -- Status Code Esperado: ${STATUS_CODE_ESPERADO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<arg>${STATUS_CODE_ESPERADO}</arg>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="E a estrutura de resposta deve estar de acordo com o arquivo jsonSchema/login/Post/response.json" owner="LoginBDD" source_name="E a estrutura de resposta deve estar de acordo com o arquivo ${SCHEMA_PATH}">
+<kw name="Confere o contrato" owner="LoginSteps">
+<kw name="Validate Jsonschema From File" owner="JsonValidator">
+<arg>${response.json()}</arg>
+<arg>${SCHEMA_PATH}</arg>
+<doc>Validate JSON according to schema, loaded from a file.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">Schema Retornado: {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImlhdCI6MTczOTMyOTAwMiwiZXhwIjoxNzM5MzMyNjAyfQ.lhU82muKQgZrK3Kteii9vqWvP07zoFKwgxu8d-5NDSs'}</msg>
+<arg>Schema Retornado: ${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<arg>${SCHEMA_PATH}</arg>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<tag>Regressão</tag>
+<status status="PASS" start="2025-02-11T23:56:41.822670" elapsed="1.023784"/>
+</test>
+<test id="s1-t2" name="Cenário 02: Tentar fazer login com senha errada" line="12">
+<kw name="Dado que a URL está disponível está disponível" owner="LoginBDD">
+<kw name="Carrega URL" owner="LoginSteps">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">Creating Session using : alias=my_session, url=https://my-public-api-for-tests-production.up.railway.app, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>my_session</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="Quando envio a requisição POST para o endpoint &quot;/api/login&quot; com body jsonSchema/login/Post/request-senha-errada.json" owner="LoginBDD" source_name="Quando envio a requisição ${METODO} para o endpoint &quot;${ENDPOINT}&quot; com body ${JSON_FILE}">
+<kw name="Envia requisição" owner="LoginSteps">
+<if>
+<branch type="IF" condition="'${METODO}' == 'GET'">
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>my_session</arg>
+<arg>${ENDPOINT}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${METODO}' == 'POST'">
+<if>
+<branch type="IF" condition="'${ENDPOINT}' == '/api/login'">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-02-11T23:56:42.846454" level="INFO">${body} = {'username': 'admin', 'password': '123456'}</msg>
+<var>${body}</var>
+<arg>${JSON_FILE}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">POST Request : url=https://my-public-api-for-tests-production.up.railway.app/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '43', 'Content-Type': 'application/json'} 
+ body=b'{"username": "admin", "password": "123456"}' 
+ </msg>
+<msg time="2025-02-11T23:56:43.639258" level="INFO">POST Response : url=https://my-public-api-for-tests-production.up.railway.app/api/login 
+ status=401, reason=Unauthorized 
+ headers={'Content-Length': '37', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Wed, 12 Feb 2025 02:56:42 GMT', 'Etag': 'W/"25-RkwPKr0iX0BqsLpo2HoNT6Xi/ws"', 'Server': 'railway-edge', 'X-Powered-By': 'Express', 'X-Railway-Request-Id': '3mNj2geZQ0WCL3pzW2-O_w_1654200396'} 
+ body={"message":"Credenciais incorretas."} 
+ </msg>
+<msg time="2025-02-11T23:56:43.639258" level="INFO">C:\Users\Pichau\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'my-public-api-for-tests-production.up.railway.app'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-02-11T23:56:43.639258" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<var>${response}</var>
+<arg>my_session</arg>
+<arg>${ENDPOINT}</arg>
+<arg>json=${body}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</branch>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</if>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</branch>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</if>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">Resposta: {"message":"Credenciais incorretas."}</msg>
+<arg>Resposta: ${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<arg>${METODO}</arg>
+<arg>${ENDPOINT}</arg>
+<arg>${JSON_FILE}</arg>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</kw>
+<kw name="Então o código de resposta deve ser 401" owner="LoginBDD" source_name="Então o código de resposta deve ser ${STATUS_CODE_ESPERADO}">
+<kw name="Confere o status code" owner="LoginSteps">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>${STATUS_CODE_ESPERADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">Status Code Retornado: 401 -- Status Code Esperado: 401</msg>
+<arg>Status Code Retornado: ${response.status_code} -- Status Code Esperado: ${STATUS_CODE_ESPERADO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<arg>${STATUS_CODE_ESPERADO}</arg>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<kw name="E a estrutura de resposta deve estar de acordo com o arquivo jsonSchema/login/Post/response-senha-errada.json" owner="LoginBDD" source_name="E a estrutura de resposta deve estar de acordo com o arquivo ${SCHEMA_PATH}">
+<kw name="Confere o contrato" owner="LoginSteps">
+<kw name="Validate Jsonschema From File" owner="JsonValidator">
+<arg>${response.json()}</arg>
+<arg>${SCHEMA_PATH}</arg>
+<doc>Validate JSON according to schema, loaded from a file.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T23:56:43.639258" level="INFO">Schema Retornado: {'message': 'Credenciais incorretas.'}</msg>
+<arg>Schema Retornado: ${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<arg>${SCHEMA_PATH}</arg>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-11T23:56:43.639258" elapsed="0.000000"/>
+</kw>
+<tag>Regressão</tag>
+<status status="PASS" start="2025-02-11T23:56:42.846454" elapsed="0.792804"/>
+</test>
+<status status="PASS" start="2025-02-11T23:56:40.935871" elapsed="2.703387"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Regressão</stat>
+</tag>
+<suite>
+<stat name="LoginScenarios" id="s1" pass="2" fail="0" skip="0">LoginScenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
