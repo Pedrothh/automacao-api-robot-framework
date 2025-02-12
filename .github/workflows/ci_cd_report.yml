@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   actions: write
@@ -32,11 +32,12 @@ jobs:
           pip install robotframework-requests
           pip install robotframework-jsonlibrary
           pip install robotframework-jsonvalidator
-          pip install allure-robotframework 
+          pip install --upgrade allure-robotframework 
 
       - name: Run tests with Robot Framework
         run: |
           robot --outputdir results --listener allure_robotframework:allure-results LoginScenarios.robot
+          ls -lah allure-results || echo "⚠️ No Allure results found!"
         continue-on-error: true
 
   deploy:
@@ -44,7 +45,10 @@ jobs:
     needs: test
     if: always()
 
-    steps:          
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate Allure Report
         run: |
           curl -o allure-commandline.zip -L "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.9/allure-commandline-2.13.9.zip"
