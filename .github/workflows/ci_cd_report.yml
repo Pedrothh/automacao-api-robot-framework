@@ -29,7 +29,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload Robot Framework report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: robot-report
           path: results/report.html
