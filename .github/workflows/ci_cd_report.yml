@@ -65,5 +65,3 @@ jobs:
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_TOKEN_ROBOT }}
           publish_dir: ./results
-          user_name: 'Pedro Thomé'
-          user_email: 'pedro.th.dev@gmail.com'
