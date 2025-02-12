@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Permissão necessária para publicar no GitHub Pages
+  contents: write
 
 jobs:
   test:
@@ -29,30 +29,34 @@ jobs:
           pip install robotframework-requests
           pip install robotframework-jsonlibrary
           pip install robotframework-jsonvalidator
+          pip install allure-robotframework 
 
       - name: Run tests with Robot Framework
         run: |
-          robot --outputdir results LoginScenarios.robot
+          robot --outputdir results --listener allure_robotframework:allure-results LoginScenarios.robot
         continue-on-error: true
-
-      - name: Upload Robot Framework report
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-report
-          path: results/
 
   deploy:
     runs-on: ubuntu-latest
     needs: test
     if: always()  # Faz o deploy mesmo se os testes falharem
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Deploy Robot Framework report to GitHub Pages
+    steps:          
+      - name: Generate Allure Report
+        run: |
+          curl -o allure-commandline.zip -L "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.9/allure-commandline-2.13.9.zip"
+          unzip -o allure-commandline.zip -d allure
+          export PATH=$PATH:$PWD/allure/allure-2.13.9/bin
+          allure generate allure-results --clean -o allure-report
+          mv -f allure-report/history allure-results/history
+          allure generate allure-results --clean -o allure-report
+        continue-on-error: true
+  
+      - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GITHUB_TOKEN ou um PAT
-          publish_dir: ./results
-          
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          keep_files: true
+        continue-on-error: true
+        
