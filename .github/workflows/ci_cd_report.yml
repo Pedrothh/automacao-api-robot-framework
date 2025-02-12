@@ -7,10 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-  actions: write
+  contents: write  # Permissão necessária para publicar no GitHub Pages
 
 jobs:
   test:
@@ -18,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
@@ -42,26 +39,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: robot-report
-          path: results/report.html
-        continue-on-error: true
+          path: results/
 
   deploy:
     runs-on: ubuntu-latest
     needs: test
-    if: success()
+    if: always()  # Faz o deploy mesmo se os testes falharem
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: results
+        uses: actions/checkout@v4
 
       - name: Deploy Robot Framework report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACTIONS_DEPLOY_TOKEN_ROBOT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GITHUB_TOKEN ou um PAT
           publish_dir: ./results
+          
