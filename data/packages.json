@@ -3,7 +3,7 @@
   "name" : "packages",
   "children" : [ {
     "name" : "Cenário 01: Fazer login com sucesso",
-    "uid" : "3450e2fd6191d977",
+    "uid" : "faaa9d87c9907284",
     "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
     "status" : "passed",
     "time" : {
@@ -16,7 +16,7 @@
     "parameters" : [ ]
   }, {
     "name" : "Cenário 02: Tentar fazer login com senha errada",
-    "uid" : "23c8de3b31b37adc",
+    "uid" : "9425abcbcf6a70ae",
     "parentUid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
     "status" : "passed",
     "time" : {

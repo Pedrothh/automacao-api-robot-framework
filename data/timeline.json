@@ -7,7 +7,7 @@
       "name" : "default-421e3618-7da9-424b-b8f9-181af616b67c",
       "children" : [ {
         "name" : "Cenário 01: Fazer login com sucesso",
-        "uid" : "3450e2fd6191d977",
+        "uid" : "faaa9d87c9907284",
         "parentUid" : "f1a6e627f95f2507674cc3a6541f3295",
         "status" : "passed",
         "time" : {
@@ -20,7 +20,7 @@
         "parameters" : [ ]
       }, {
         "name" : "Cenário 02: Tentar fazer login com senha errada",
-        "uid" : "23c8de3b31b37adc",
+        "uid" : "9425abcbcf6a70ae",
         "parentUid" : "f1a6e627f95f2507674cc3a6541f3295",
         "status" : "passed",
         "time" : {
