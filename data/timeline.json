@@ -6,27 +6,27 @@
     "children" : [ {
       "name" : "default-421e3618-7da9-424b-b8f9-181af616b67c",
       "children" : [ {
-        "name" : "Cenário 02: Tentar fazer login com senha errada",
-        "uid" : "48e03a0b92591b51",
-        "parentUid" : "f1a6e627f95f2507674cc3a6541f3295",
-        "status" : "passed",
-        "time" : {
-          "start" : 1739464561991,
-          "stop" : 1739464562776,
-          "duration" : 785
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Cenário 01: Fazer login com sucesso",
-        "uid" : "52708b3fe63c0fcc",
+        "uid" : "3450e2fd6191d977",
         "parentUid" : "f1a6e627f95f2507674cc3a6541f3295",
         "status" : "passed",
         "time" : {
           "start" : 1739464560953,
           "stop" : 1739464561988,
           "duration" : 1035
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Cenário 02: Tentar fazer login com senha errada",
+        "uid" : "23c8de3b31b37adc",
+        "parentUid" : "f1a6e627f95f2507674cc3a6541f3295",
+        "status" : "passed",
+        "time" : {
+          "start" : 1739464561991,
+          "stop" : 1739464562776,
+          "duration" : 785
         },
         "flaky" : false,
         "newFailed" : false,

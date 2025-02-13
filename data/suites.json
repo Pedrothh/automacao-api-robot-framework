@@ -5,7 +5,7 @@
     "name" : "LoginScenarios",
     "children" : [ {
       "name" : "Cenário 01: Fazer login com sucesso",
-      "uid" : "52708b3fe63c0fcc",
+      "uid" : "3450e2fd6191d977",
       "parentUid" : "1fff699e5c8de0e705321da05f46902f",
       "status" : "passed",
       "time" : {
@@ -18,7 +18,7 @@
       "parameters" : [ ]
     }, {
       "name" : "Cenário 02: Tentar fazer login com senha errada",
-      "uid" : "48e03a0b92591b51",
+      "uid" : "23c8de3b31b37adc",
       "parentUid" : "1fff699e5c8de0e705321da05f46902f",
       "status" : "passed",
       "time" : {
