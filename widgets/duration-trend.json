@@ -1,7 +1,11 @@
 [ {
   "buildOrder" : 1,
-  "data" : { }
+  "data" : {
+    "duration" : 1823
+  }
 }, {
   "buildOrder" : 1,
-  "data" : { }
+  "data" : {
+    "duration" : 1823
+  }
 } ]
