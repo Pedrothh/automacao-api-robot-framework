@@ -1,5 +1,43 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test failed",
+    "children" : [ {
+      "name" : "502 != 200",
+      "children" : [ {
+        "name" : "Cenário 01: Fazer login com sucesso",
+        "uid" : "f22f5967fdd23471",
+        "parentUid" : "87f6695fa6228b27034700f6a7d20f49",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739590748761,
+          "stop" : 1739590752040,
+          "duration" : 3279
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "87f6695fa6228b27034700f6a7d20f49"
+    }, {
+      "name" : "500 != 401",
+      "children" : [ {
+        "name" : "Cenário 02: Tentar fazer login com senha errada",
+        "uid" : "bd6e25bc5013acbf",
+        "parentUid" : "a8556281dda873889b4d1f93d8c855d3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739590752043,
+          "stop" : 1739590767957,
+          "duration" : 15914
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a8556281dda873889b4d1f93d8c855d3"
+    } ],
+    "uid" : "6f954d88a7c526d172b7c6798d380845"
+  } ]
 }
