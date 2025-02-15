@@ -1,0 +1,21 @@
+[ {
+  "uid" : "54dc49bcab54b0d6",
+  "name" : "Cenário 01: Fazer login com sucesso",
+  "time" : {
+    "start" : 1739592669215,
+    "stop" : 1739592670110,
+    "duration" : 895
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c81359ebb94bf343",
+  "name" : "Cenário 02: Tentar fazer login com senha errada",
+  "time" : {
+    "start" : 1739592670112,
+    "stop" : 1739592670590,
+    "duration" : 478
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

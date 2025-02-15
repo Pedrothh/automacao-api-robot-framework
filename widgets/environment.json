@@ -1,0 +1,4 @@
+[ {
+  "values" : [ "https://my-public-api-for-tests-production.up.railway.app/api-docs" ],
+  "name" : "API_BASE"
+} ]
