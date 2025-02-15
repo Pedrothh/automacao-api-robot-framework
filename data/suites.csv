@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Sat Feb 15 03:44:40 UTC 2025","Sat Feb 15 03:44:42 UTC 2025","1422","","LoginScenarios","","","","Cenário 01: Fazer login com sucesso",""
-"passed","Sat Feb 15 03:44:42 UTC 2025","Sat Feb 15 03:44:42 UTC 2025","608","","LoginScenarios","","","","Cenário 02: Tentar fazer login com senha errada",""
+"passed","Sat Feb 15 03:52:05 UTC 2025","Sat Feb 15 03:52:05 UTC 2025","629","","LoginScenarios","","","","Cenário 01: Fazer login com sucesso",""
+"passed","Sat Feb 15 03:52:05 UTC 2025","Sat Feb 15 03:52:06 UTC 2025","504","","LoginScenarios","","","","Cenário 02: Tentar fazer login com senha errada",""

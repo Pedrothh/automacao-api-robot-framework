@@ -1,11 +1,9 @@
 [ {
-  "buildOrder" : 1,
   "data" : {
     "run" : 2,
     "retry" : 0
   }
 }, {
-  "buildOrder" : 1,
   "data" : {
     "run" : 2,
     "retry" : 0

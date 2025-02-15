@@ -3,26 +3,26 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "Cenário 01: Fazer login com sucesso",
-    "uid" : "3503ad176f71d15e",
+    "uid" : "4bf086163544229b",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
+    "status" : "passed",
     "time" : {
-      "start" : 1739591080588,
-      "stop" : 1739591082010,
-      "duration" : 1422
+      "start" : 1739591525110,
+      "stop" : 1739591525739,
+      "duration" : 629
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "Cenário 02: Tentar fazer login com senha errada",
-    "uid" : "cd9ef4e44e56f031",
+    "uid" : "fc2308877a745485",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1739591082012,
-      "stop" : 1739591082620,
-      "duration" : 608
+      "start" : 1739591525741,
+      "stop" : 1739591526245,
+      "duration" : 504
     },
     "flaky" : false,
     "newFailed" : false,
