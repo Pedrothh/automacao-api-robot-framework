@@ -1,0 +1,512 @@
+{
+  "uid" : "2f856fc280c5c72f",
+  "name" : "Cenário 01: Fazer login com sucesso",
+  "fullName" : "LoginScenarios.Cenário 01: Fazer login com sucesso",
+  "historyId" : "89c0f50e2f158672d308548f27a4dc23",
+  "time" : {
+    "start" : 1739592905305,
+    "stop" : 1739592906132,
+    "duration" : 827
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "LoginBDD.Dado que a URL está disponível está disponível",
+      "time" : {
+        "start" : 1739592905305,
+        "stop" : 1739592905307,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Carrega URL",
+        "time" : {
+          "start" : 1739592905306,
+          "stop" : 1739592905307,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "RequestsLibrary.Create Session",
+          "time" : {
+            "start" : 1739592905306,
+            "stop" : 1739592905307,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "19b6ff29f4e40f58",
+            "name" : "Keyword Log",
+            "source" : "19b6ff29f4e40f58.html",
+            "type" : "text/html",
+            "size" : 257
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "my_session"
+          }, {
+            "name" : "arg2",
+            "value" : "${BASE_URL}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.Quando envio a requisição POST para o endpoint \"/api/login\" com body jsonSchemas/login/post/request.json",
+      "time" : {
+        "start" : 1739592905308,
+        "stop" : 1739592906126,
+        "duration" : 818
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Envia requisição",
+        "time" : {
+          "start" : 1739592905308,
+          "stop" : 1739592906126,
+          "duration" : 818
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "'${METODO}' == 'GET'",
+          "time" : {
+            "start" : 1739592905308,
+            "stop" : 1739592905309,
+            "duration" : 1
+          },
+          "status" : "skipped",
+          "steps" : [ {
+            "name" : "RequestsLibrary.GET On Session",
+            "time" : {
+              "start" : 1739592905309,
+              "stop" : 1739592905309,
+              "duration" : 0
+            },
+            "status" : "skipped",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "arg1",
+              "value" : "my_session"
+            }, {
+              "name" : "arg2",
+              "value" : "${ENDPOINT}"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "'${METODO}' == 'POST'",
+          "time" : {
+            "start" : 1739592905309,
+            "stop" : 1739592906124,
+            "duration" : 815
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "'${ENDPOINT}' == '/api/login'",
+            "time" : {
+              "start" : 1739592905309,
+              "stop" : 1739592906124,
+              "duration" : 815
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "JSONLibrary.Load Json From File",
+              "time" : {
+                "start" : 1739592905309,
+                "stop" : 1739592905310,
+                "duration" : 1
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "82c2fab3dc880ace",
+                "name" : "Keyword Log",
+                "source" : "82c2fab3dc880ace.html",
+                "type" : "text/html",
+                "size" : 78
+              } ],
+              "parameters" : [ {
+                "name" : "arg1",
+                "value" : "${JSON_FILE}"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "RequestsLibrary.POST On Session",
+              "time" : {
+                "start" : 1739592905310,
+                "stop" : 1739592906124,
+                "duration" : 814
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "29fda38b705df432",
+                "name" : "Keyword Log",
+                "source" : "29fda38b705df432.html",
+                "type" : "text/html",
+                "size" : 1486
+              } ],
+              "parameters" : [ {
+                "name" : "arg1",
+                "value" : "my_session"
+              }, {
+                "name" : "arg2",
+                "value" : "${ENDPOINT}"
+              }, {
+                "name" : "arg3",
+                "value" : "json=${body}"
+              }, {
+                "name" : "arg4",
+                "value" : "expected_status=any"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 2,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 3,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739592906124,
+            "stop" : 1739592906125,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "fe687b61c93a4338",
+            "name" : "Keyword Log",
+            "source" : "fe687b61c93a4338.html",
+            "type" : "text/html",
+            "size" : 223
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Resposta: ${response.text}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Set Test Variable",
+          "time" : {
+            "start" : 1739592906125,
+            "stop" : 1739592906126,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "be536d312fdd3c43",
+            "name" : "Keyword Log",
+            "source" : "be536d312fdd3c43.html",
+            "type" : "text/html",
+            "size" : 56
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${METODO}"
+        }, {
+          "name" : "arg2",
+          "value" : "${ENDPOINT}"
+        }, {
+          "name" : "arg3",
+          "value" : "${JSON_FILE}"
+        } ],
+        "stepsCount" : 8,
+        "attachmentsCount" : 4,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 9,
+      "attachmentsCount" : 4,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.Então o código de resposta deve ser 200",
+      "time" : {
+        "start" : 1739592906126,
+        "stop" : 1739592906128,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Confere o status code",
+        "time" : {
+          "start" : 1739592906126,
+          "stop" : 1739592906128,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "BuiltIn.Should Be Equal As Strings",
+          "time" : {
+            "start" : 1739592906127,
+            "stop" : 1739592906127,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "9fe345d3e8d7bf01",
+            "name" : "Keyword Log",
+            "source" : "9fe345d3e8d7bf01.html",
+            "type" : "text/html",
+            "size" : 79
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response.status_code}"
+          }, {
+            "name" : "arg2",
+            "value" : "${STATUS_CODE_ESPERADO}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739592906127,
+            "stop" : 1739592906128,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "36aeb3d1b7e2aeee",
+            "name" : "Keyword Log",
+            "source" : "36aeb3d1b7e2aeee.html",
+            "type" : "text/html",
+            "size" : 81
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Status Code Retornado: ${response.status_code} -- Status Code Esperado: ${STATUS_CODE_ESPERADO}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${STATUS_CODE_ESPERADO}"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.E a estrutura de resposta deve estar de acordo com o arquivo jsonSchemas/login/post/response.json",
+      "time" : {
+        "start" : 1739592906128,
+        "stop" : 1739592906132,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Confere o contrato",
+        "time" : {
+          "start" : 1739592906129,
+          "stop" : 1739592906132,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "JsonValidator.Validate Jsonschema From File",
+          "time" : {
+            "start" : 1739592906129,
+            "stop" : 1739592906131,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response.json()}"
+          }, {
+            "name" : "arg2",
+            "value" : "${SCHEMA_PATH}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739592906131,
+            "stop" : 1739592906132,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "564b59ec36ff6ee8",
+            "name" : "Keyword Log",
+            "source" : "564b59ec36ff6ee8.html",
+            "type" : "text/html",
+            "size" : 232
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Schema Retornado: ${response.json()}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SCHEMA_PATH}"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 21,
+    "attachmentsCount" : 8,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "LoginScenarios"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1694-59"
+  }, {
+    "name" : "thread",
+    "value" : "default-cfd9ef48-52dd-47cd-9989-4343aac2c13c"
+  }, {
+    "name" : "tag",
+    "value" : "Regressão"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test passed",
+      "matchedStatuses" : [ "passed" ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f6ea68a9eaed9fc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1739592905305,
+          "stop" : 1739592906132,
+          "duration" : 827
+        }
+      } ]
+    },
+    "tags" : [ "Regressão" ]
+  },
+  "source" : "2f856fc280c5c72f.json",
+  "parameterValues" : [ ]
+}
