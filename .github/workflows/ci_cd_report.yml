@@ -36,7 +36,7 @@ jobs:
 
       - name: Run tests with Robot Framework
         run: |
-          robot --outputdir allure-results --listener allure_robotframework:allure-results LoginScenarios.robot
+          robot --outputdir results --listener allure_robotframework:allure-results LoginScenarios.robot
           ls -lah allure-results || echo "⚠️ No Allure results found!"
         continue-on-error: true
 
@@ -78,4 +78,10 @@ jobs:
           publish_dir: ./allure-report
           keep_files: true
         continue-on-error: true
-        
+
+      - name: Deploy Robot Framework report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_TOKEN_ROBOT }}
+          publish_dir: ./results
+        continue-on-error: true
