@@ -1,20 +1,20 @@
 [ {
-  "uid" : "4bf086163544229b",
-  "name" : "Cenário 01: Fazer login com sucesso",
+  "uid" : "64c978353d259293",
+  "name" : "Cenário 02: Tentar fazer login com senha errada",
   "time" : {
-    "start" : 1739591525110,
-    "stop" : 1739591525739,
-    "duration" : 629
+    "start" : 1739592491880,
+    "stop" : 1739592492422,
+    "duration" : 542
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "fc2308877a745485",
-  "name" : "Cenário 02: Tentar fazer login com senha errada",
+  "uid" : "db203a45a547de0e",
+  "name" : "Cenário 01: Fazer login com sucesso",
   "time" : {
-    "start" : 1739591525741,
-    "stop" : 1739591526245,
-    "duration" : 504
+    "start" : 1739592491099,
+    "stop" : 1739592491878,
+    "duration" : 779
   },
   "status" : "passed",
   "severity" : "normal"

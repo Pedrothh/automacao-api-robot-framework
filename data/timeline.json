@@ -2,38 +2,38 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "fv-az1704-92",
+    "name" : "fv-az2035-366",
     "children" : [ {
-      "name" : "default-6a1aa49a-6bfa-49fa-9b4c-a29943e7a361",
+      "name" : "default-dcb9f5ae-a4a8-4f82-b172-f0f96d1da04d",
       "children" : [ {
-        "name" : "Cenário 02: Tentar fazer login com senha errada",
-        "uid" : "fc2308877a745485",
-        "parentUid" : "4271ae9c10e69373bcffc7a95a2239d1",
+        "name" : "Cenário 01: Fazer login com sucesso",
+        "uid" : "db203a45a547de0e",
+        "parentUid" : "21e2eddcb40b59b1d2d8ac14ee1f0a6f",
         "status" : "passed",
         "time" : {
-          "start" : 1739591525741,
-          "stop" : 1739591526245,
-          "duration" : 504
+          "start" : 1739592491099,
+          "stop" : 1739592491878,
+          "duration" : 779
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Cenário 01: Fazer login com sucesso",
-        "uid" : "4bf086163544229b",
-        "parentUid" : "4271ae9c10e69373bcffc7a95a2239d1",
+        "name" : "Cenário 02: Tentar fazer login com senha errada",
+        "uid" : "64c978353d259293",
+        "parentUid" : "21e2eddcb40b59b1d2d8ac14ee1f0a6f",
         "status" : "passed",
         "time" : {
-          "start" : 1739591525110,
-          "stop" : 1739591525739,
-          "duration" : 629
+          "start" : 1739592491880,
+          "stop" : 1739592492422,
+          "duration" : 542
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "4271ae9c10e69373bcffc7a95a2239d1"
+      "uid" : "21e2eddcb40b59b1d2d8ac14ee1f0a6f"
     } ],
-    "uid" : "2e1ada30d9857ebd8adbc7854e7a5b4c"
+    "uid" : "f41b116736587de7471c962700a9c43b"
   } ]
 }
