@@ -4,10 +4,10 @@
     "uid" : "1fff699e5c8de0e705321da05f46902f",
     "name" : "LoginScenarios",
     "statistic" : {
-      "failed" : 2,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 2
     }

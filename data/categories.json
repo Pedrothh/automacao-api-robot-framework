@@ -4,40 +4,43 @@
   "children" : [ {
     "name" : "Test failed",
     "children" : [ {
-      "name" : "502 != 200",
+      "name" : "JsonValidatorError: Failed validating json by schema",
       "children" : [ {
         "name" : "Cenário 01: Fazer login com sucesso",
-        "uid" : "f22f5967fdd23471",
-        "parentUid" : "87f6695fa6228b27034700f6a7d20f49",
+        "uid" : "3503ad176f71d15e",
+        "parentUid" : "22419db21fbcb1173b858453d16253e7",
         "status" : "failed",
         "time" : {
-          "start" : 1739590748761,
-          "stop" : 1739590752040,
-          "duration" : 3279
+          "start" : 1739591080588,
+          "stop" : 1739591082010,
+          "duration" : 1422
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "87f6695fa6228b27034700f6a7d20f49"
-    }, {
-      "name" : "500 != 401",
-      "children" : [ {
-        "name" : "Cenário 02: Tentar fazer login com senha errada",
-        "uid" : "bd6e25bc5013acbf",
-        "parentUid" : "a8556281dda873889b4d1f93d8c855d3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1739590752043,
-          "stop" : 1739590767957,
-          "duration" : 15914
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a8556281dda873889b4d1f93d8c855d3"
+      "uid" : "22419db21fbcb1173b858453d16253e7"
     } ],
     "uid" : "6f954d88a7c526d172b7c6798d380845"
+  }, {
+    "name" : "Test passed",
+    "children" : [ {
+      "children" : [ {
+        "name" : "Cenário 02: Tentar fazer login com senha errada",
+        "uid" : "cd9ef4e44e56f031",
+        "parentUid" : "9c80a0c1559ab612131af073d4d469b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1739591082012,
+          "stop" : 1739591082620,
+          "duration" : 608
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9c80a0c1559ab612131af073d4d469b3"
+    } ],
+    "uid" : "bf711d51452b6be752b9682737c0edfd"
   } ]
 }

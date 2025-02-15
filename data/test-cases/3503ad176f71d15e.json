@@ -1,0 +1,519 @@
+{
+  "uid" : "3503ad176f71d15e",
+  "name" : "Cenário 01: Fazer login com sucesso",
+  "fullName" : "LoginScenarios.Cenário 01: Fazer login com sucesso",
+  "historyId" : "89c0f50e2f158672d308548f27a4dc23",
+  "time" : {
+    "start" : 1739591080588,
+    "stop" : 1739591082010,
+    "duration" : 1422
+  },
+  "status" : "failed",
+  "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+    "steps" : [ {
+      "name" : "LoginBDD.Dado que a URL está disponível está disponível",
+      "time" : {
+        "start" : 1739591080588,
+        "stop" : 1739591080590,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Carrega URL",
+        "time" : {
+          "start" : 1739591080588,
+          "stop" : 1739591080590,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "RequestsLibrary.Create Session",
+          "time" : {
+            "start" : 1739591080589,
+            "stop" : 1739591080590,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "8c42d11c8ab1f0a4",
+            "name" : "Keyword Log",
+            "source" : "8c42d11c8ab1f0a4.html",
+            "type" : "text/html",
+            "size" : 257
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "my_session"
+          }, {
+            "name" : "arg2",
+            "value" : "${BASE_URL}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.Quando envio a requisição POST para o endpoint \"/api/login\" com body jsonSchemas/login/post/request.json",
+      "time" : {
+        "start" : 1739591080590,
+        "stop" : 1739591082002,
+        "duration" : 1412
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Envia requisição",
+        "time" : {
+          "start" : 1739591080591,
+          "stop" : 1739591082002,
+          "duration" : 1411
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "'${METODO}' == 'GET'",
+          "time" : {
+            "start" : 1739591080591,
+            "stop" : 1739591080591,
+            "duration" : 0
+          },
+          "status" : "skipped",
+          "steps" : [ {
+            "name" : "RequestsLibrary.GET On Session",
+            "time" : {
+              "start" : 1739591080591,
+              "stop" : 1739591080591,
+              "duration" : 0
+            },
+            "status" : "skipped",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "arg1",
+              "value" : "my_session"
+            }, {
+              "name" : "arg2",
+              "value" : "${ENDPOINT}"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "'${METODO}' == 'POST'",
+          "time" : {
+            "start" : 1739591080592,
+            "stop" : 1739591082000,
+            "duration" : 1408
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "'${ENDPOINT}' == '/api/login'",
+            "time" : {
+              "start" : 1739591080592,
+              "stop" : 1739591082000,
+              "duration" : 1408
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "JSONLibrary.Load Json From File",
+              "time" : {
+                "start" : 1739591080592,
+                "stop" : 1739591080592,
+                "duration" : 0
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "5a1db6dee65b4ee2",
+                "name" : "Keyword Log",
+                "source" : "5a1db6dee65b4ee2.html",
+                "type" : "text/html",
+                "size" : 78
+              } ],
+              "parameters" : [ {
+                "name" : "arg1",
+                "value" : "${JSON_FILE}"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "RequestsLibrary.POST On Session",
+              "time" : {
+                "start" : 1739591080592,
+                "stop" : 1739591082000,
+                "duration" : 1408
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "a54c189d3bc09f08",
+                "name" : "Keyword Log",
+                "source" : "a54c189d3bc09f08.html",
+                "type" : "text/html",
+                "size" : 1486
+              } ],
+              "parameters" : [ {
+                "name" : "arg1",
+                "value" : "my_session"
+              }, {
+                "name" : "arg2",
+                "value" : "${ENDPOINT}"
+              }, {
+                "name" : "arg3",
+                "value" : "json=${body}"
+              }, {
+                "name" : "arg4",
+                "value" : "expected_status=any"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 2,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 3,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739591082000,
+            "stop" : 1739591082001,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "5ac005522db75fa5",
+            "name" : "Keyword Log",
+            "source" : "5ac005522db75fa5.html",
+            "type" : "text/html",
+            "size" : 223
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Resposta: ${response.text}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Set Test Variable",
+          "time" : {
+            "start" : 1739591082001,
+            "stop" : 1739591082001,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "ed89559da342e402",
+            "name" : "Keyword Log",
+            "source" : "ed89559da342e402.html",
+            "type" : "text/html",
+            "size" : 56
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${METODO}"
+        }, {
+          "name" : "arg2",
+          "value" : "${ENDPOINT}"
+        }, {
+          "name" : "arg3",
+          "value" : "${JSON_FILE}"
+        } ],
+        "stepsCount" : 8,
+        "attachmentsCount" : 4,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 9,
+      "attachmentsCount" : 4,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.Então o código de resposta deve ser 200",
+      "time" : {
+        "start" : 1739591082002,
+        "stop" : 1739591082004,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "LoginSteps.Confere o status code",
+        "time" : {
+          "start" : 1739591082002,
+          "stop" : 1739591082004,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "BuiltIn.Should Be Equal As Strings",
+          "time" : {
+            "start" : 1739591082002,
+            "stop" : 1739591082003,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "4b75cfa0879113fb",
+            "name" : "Keyword Log",
+            "source" : "4b75cfa0879113fb.html",
+            "type" : "text/html",
+            "size" : 79
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response.status_code}"
+          }, {
+            "name" : "arg2",
+            "value" : "${STATUS_CODE_ESPERADO}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739591082003,
+            "stop" : 1739591082004,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "3c10b9fb6ed023a9",
+            "name" : "Keyword Log",
+            "source" : "3c10b9fb6ed023a9.html",
+            "type" : "text/html",
+            "size" : 81
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Status Code Retornado: ${response.status_code} -- Status Code Esperado: ${STATUS_CODE_ESPERADO}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${STATUS_CODE_ESPERADO}"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "LoginBDD.E a estrutura de resposta deve estar de acordo com o arquivo jsonSchemas/login/post/response.json",
+      "time" : {
+        "start" : 1739591082004,
+        "stop" : 1739591082009,
+        "duration" : 5
+      },
+      "status" : "failed",
+      "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+      "steps" : [ {
+        "name" : "LoginSteps.Confere o contrato",
+        "time" : {
+          "start" : 1739591082005,
+          "stop" : 1739591082009,
+          "duration" : 4
+        },
+        "status" : "failed",
+        "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+        "steps" : [ {
+          "name" : "JsonValidator.Validate Jsonschema From File",
+          "time" : {
+            "start" : 1739591082005,
+            "stop" : 1739591082009,
+            "duration" : 4
+          },
+          "status" : "failed",
+          "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "51fef016711ab9db",
+            "name" : "Keyword Log",
+            "source" : "51fef016711ab9db.html",
+            "type" : "text/html",
+            "size" : 417
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${response.json()}"
+          }, {
+            "name" : "arg2",
+            "value" : "${SCHEMA_PATH}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        }, {
+          "name" : "BuiltIn.Log",
+          "time" : {
+            "start" : 1739591082009,
+            "stop" : 1739591082009,
+            "duration" : 0
+          },
+          "status" : "skipped",
+          "statusMessage" : "JsonValidatorError: Failed validating json by schema",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "Schema Retornado: ${response.json()}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SCHEMA_PATH}"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 21,
+    "attachmentsCount" : 8,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "LoginScenarios"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1057-468"
+  }, {
+    "name" : "thread",
+    "value" : "default-643a9dd0-a0ae-4d8b-abb1-82fe57b56183"
+  }, {
+    "name" : "tag",
+    "value" : "Regressão"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test failed",
+      "matchedStatuses" : [ "failed" ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "8363ddd6230e2f50",
+        "status" : "failed",
+        "statusDetails" : "JsonValidatorError: Failed validating json by schema",
+        "time" : {
+          "start" : 1739591080588,
+          "stop" : 1739591082010,
+          "duration" : 1422
+        }
+      } ]
+    },
+    "tags" : [ "Regressão" ]
+  },
+  "source" : "3503ad176f71d15e.json",
+  "parameterValues" : [ ]
+}
